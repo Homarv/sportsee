@@ -1,0 +1,45 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; 
+}
+
+.container{
+  display: flex;
+  flex: 1;
+}
+
+.main-container{
+  width: 100%;
+  padding: 30px;;
+}
+
+.welcome-message{
+
+}
+
+.principal-container{
+  display: flex;
+  width: 100%;
+
+}
+
+.child-chart-container{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.test1{
+  background-color: #FBFBFB;
+  height: 200px;
+  width: 30%;
+}
+
+.barchart-container{
+  width: 100%;
+}
+
+.barChartActivity{
+  width: 100%;
+}

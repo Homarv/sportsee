@@ -1,0 +1,18 @@
+.sidebar{
+  width: 120px;
+  background-color: black;
+  display: flex;
+  flex-direction: column ;
+  justify-content: space-around;
+  align-items: center;
+  .sidebarbtn{
+    margin-bottom: 20px;
+  }
+}
+
+.copiryght{
+  color: white;
+  transform: rotate(-90deg);
+  white-space: nowrap;
+  margin-bottom: 20px;
+}

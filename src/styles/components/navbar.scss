@@ -1,0 +1,26 @@
+.navbar{
+  background-color: black;
+  display: flex;
+  &_container_logo{
+    display: flex;
+    align-items: center;
+      h1{
+        color: red;
+      }
+  }
+  &_logo{
+    height: 50px;
+  }
+  ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px;
+  }
+}
+
+.link {
+  text-decoration: none; /* Supprime la soulignement par défaut */
+  color: white; /* Couleur du texte personnalisée */
+}
