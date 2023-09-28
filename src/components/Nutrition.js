@@ -24,28 +24,28 @@ const Nutrition = ({informationData}) => {
         <Sidebarbtn imageUrl={flame} description="flamme" addClass="fire"/>
         <div>
           <p className="bold">{informationData.keyData.calorieCount}Kcal</p>
-          <p>Calories</p>
+          <p className="nutrition__description">Calories</p>
         </div>
       </div>
       <div className="nutrition__container">
         <Sidebarbtn imageUrl={chicken} description="poulet" addClass="chicken"/>
         <div>
           <p className="bold">{informationData.keyData.proteinCount}g</p>
-          <p>Protéine</p>
+          <p className="nutrition__description">Protéine</p>
         </div>
       </div>
       <div className="nutrition__container">
         <Sidebarbtn imageUrl={apple} description="pomme" addClass="apple"/>
         <div>
           <p className="bold">{informationData.keyData.carbohydrateCount}g</p>
-          <p>Glucides</p>
+          <p className="nutrition__description">Glucides</p>
         </div>
       </div>
       <div className="nutrition__container">
         <Sidebarbtn imageUrl={burger} description="burger" addClass="burger"/>
         <div>
           <p className="bold">{informationData.keyData.lipidCount}g</p>
-          <p>Lipides</p>
+          <p className="nutrition__description">Lipides</p>
         </div>
       </div>
     </div>
