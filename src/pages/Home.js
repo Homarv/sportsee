@@ -29,51 +29,22 @@ const Home = () => {
   const [informationData, setInformationData] = useState(null);
   const [performanceData, setPerformanceData] = useState(null);
 
-  // Effets secondaires pour récupérer les données
   useEffect(() => {
-    // Récupère les données des sessions moyennes de l'utilisateur
-    GetAverageSessions(userId)
-      .then(data => {
-        setAverageSessionsData(data);
+    // Récupère les données des sessions moyennes, d'activité, d'information et de performance de l'utilisateur
+    Promise.all([
+      GetAverageSessions(userId),
+      GetActivity(userId),
+      GetInformation(userId),
+      GetPerformance(userId)
+    ])
+      .then(([averageSessions, activity, information, performance]) => {
+        setAverageSessionsData(averageSessions);
+        setActivityData(activity);
+        setInformationData(information);
+        setPerformanceData(performance);
       })
-      .catch(error => {
-        console.error('Erreur lors de la récupération des sessions moyennes de l\'utilisateur :', error);
-      });
   }, [userId]);
-
-  useEffect(() => {
-    // Récupère les données d'activité de l'utilisateur
-    GetActivity(userId)
-      .then(data => {
-        setActivityData(data);
-      })
-      .catch(error => {
-        console.error('Erreur lors de la récupération de l\'activité de l\'utilisateur :', error);
-      });
-  }, [userId]);
-
-  useEffect(() => {
-    // Récupère les données d'information de l'utilisateur
-    GetInformation(userId)
-      .then(data => {
-        setInformationData(data);
-      })
-      .catch(error => {
-        console.error('Erreur lors de la récupération des informations de l\'utilisateur :', error);
-      });
-  }, [userId]);
-
-  useEffect(() => {
-    // Récupère les données de performance de l'utilisateur
-    GetPerformance(userId)
-      .then(data => {
-        setPerformanceData(data);
-      })
-      .catch(error => {
-        console.error('Erreur lors de la récupération des performances de l\'utilisateur :', error);
-      });
-  }, [userId]);
-
+  
   // Rendu du composant
   return averageSessionsData && activityData ? (
     <div className='home'>

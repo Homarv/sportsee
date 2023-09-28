@@ -5,7 +5,7 @@ import { USER_MAIN_DATA } from "../mock/realmock";
 const GetInformation = (userId)  => {
  
   if (switchtoApi) {
-    const userActivity = USER_MAIN_DATA.find((user) => user.userId === userId);
+    const userActivity = USER_MAIN_DATA.find((user) => user.id === userId);
     return Promise.resolve(userActivity);     // Renvoyer une promesse résolue avec les données mock
   } 
   else {

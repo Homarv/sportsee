@@ -19,6 +19,7 @@ const Barchart = ({ activityData }) => {
   let modele = new Modele();
   const updateData = modele.formatdate(activityData);
 
+
   /**
    * Composant personnalisé pour l'affichage des informations de tooltip.
    *
@@ -91,7 +92,7 @@ const Barchart = ({ activityData }) => {
         iconSize={12}
         iconType="circle"
         formatter={(value) => {
-          if (value === 'calories') {
+          if (value === 'Calories brûlées (kCal)') {
             return `Calories brûlées (kCal)`;
           }
           return `Poids (kg)`;

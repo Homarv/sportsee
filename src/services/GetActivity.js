@@ -2,7 +2,6 @@ import axios from "axios";
 import { switchtoApi } from "./Switch";
 import { USER_ACTIVITY } from "../mock/realmock";
 
-console.log(switchtoApi);
 
 const GetActivity = (userId) => {
   if (switchtoApi) {
