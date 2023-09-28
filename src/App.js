@@ -6,10 +6,9 @@ function App() {
   return (
     <BrowserRouter>
     <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/home/:id" element={<Home />} />
         {/* path="*" fonctionne si jamais l'url ne correspond à rien de dééclaré au dessus  */}
         <Route path="*" element={<Error />} />
-        {/*  <Route path="/Fiche_Logement/:id" element={<FicheLogement />} />*/}
     </Routes>
   </BrowserRouter>
   );

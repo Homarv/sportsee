@@ -1,26 +1,38 @@
-import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer } from 'recharts';
-import { MOCK_USER_PERFORMANCE_18 } from '../mock/mock';
+import { Radar, RadarChart, PolarGrid, PolarAngleAxis } from 'recharts';
+import Modele from '../models/Modele';
 
-console.log(MOCK_USER_PERFORMANCE_18);
+/**
+ * Composant affichant un graphique radar de performances.
+ *
+ * @component
+ * @param {Object} performanceData - Les données de performance.
+ * @param {Array} performanceData - Les données de performance par catégorie.
+ * @param {string} performanceData.kind - Le type de performance (ex. "cardio").
+ * @param {number} performanceData.value - La valeur de performance pour la catégorie.
+ * @returns {JSX.Element} Élément JSX représentant le graphique radar de performances.
+ */
 
-const Radarchart = () => {
 
-  const kindLabels = Object.values(MOCK_USER_PERFORMANCE_18.kind); // Obtenez les labels à partir de l'objet kind
+const Radarchart = ({ performanceData }) => {
+
+  // Initialise le modèle de données
+  const modele = new Modele();
+  const updateData = modele.transformPerformance(performanceData);
 
   return (
-    <ResponsiveContainer width={250} height={250}>
-        <RadarChart 
-          cx="50%" 
-          cy="50%" 
-          outerRadius="60%" 
-          data={MOCK_USER_PERFORMANCE_18.data}
-          style={{ backgroundColor: 'black', borderRadius: '20px' }}
-        >
-          <PolarGrid />
-          <PolarAngleAxis dataKey="kind" tick={{ fontSize: 10, stroke: 'white' }} tickFormatter={(value) => kindLabels[value - 1]} />
-          <Radar name='performance' dataKey="value" stroke="red" fill="red" fillOpacity={0.6} />
-        </RadarChart>
-     </ResponsiveContainer>
+    <RadarChart
+      width={220}
+      height={220}
+      cx="50%"
+      cy="50%"
+      outerRadius="60%"
+      data={updateData}
+      style={{ backgroundColor: 'black', borderRadius: '10px' }}
+    >
+      <PolarGrid />
+      <PolarAngleAxis dataKey="kind" tick={{ fontSize: 10, stroke: 'white' }} />
+      <Radar name='performance' dataKey="value" stroke="red" fill="red" fillOpacity={0.6} />
+    </RadarChart>
   );
 };
 

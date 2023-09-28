@@ -1,64 +1,62 @@
-import { RadialBarChart, RadialBar, Legend, Tooltip, ResponsiveContainer } from 'recharts';
-import { MOCK_USER_18 } from '../mock/mock';
+import { RadialBarChart, RadialBar, Legend, Tooltip } from 'recharts';
+import Modele from '../models/Modele';
 
-const data = [
-  {
-    name: 'Reste',
-    score: 100 - MOCK_USER_18.score * 100,
-    fill: 'transparent',
-  },
-  {
-    name: 'Score',
-    score: MOCK_USER_18.score * 100,
-    fill: 'red',
-  },
-];
+/**
+ * Composant affichant un graphique radial de barres simples.
+ *
+ * @component
+ * @param {Object} informationData - Les données d'information.
+ * @returns {JSX.Element} Élément JSX représentant le graphique radial de barres simples.
+ */
 
+const SimpleRadialBarchart = ({ informationData }) => {
 
-const SimpleRadialBarchart = () => {
+  let model = new Modele();
+  const updateData = model.calculScore(informationData);
+
   return (
-    <ResponsiveContainer width={250} height={250}>
-      <RadialBarChart  
-      cx={125} cy={150} 
-      innerRadius={20} 
-      outerRadius={140} 
-      barSize={10} 
-      data={data}
-      style={{ backgroundColor: '#FBFBFB', borderRadius: '20px' }}
-      >
-        <RadialBar dataKey="score" cornerRadius={10} />
-        <Legend iconSize={0} width={120} height={140} layout="vertical" verticalAlign="top" align="left" />
+    <RadialBarChart
+      width={220}
+      height={220}
+      cx={110}
+      cy={115}
+      innerRadius={20}
+      outerRadius={140}
+      barSize={10}
+      data={updateData}
+      style={{ backgroundColor: '#FBFBFB', borderRadius: '10px' }}
+    >
+      <RadialBar dataKey="score" cornerRadius={10} />
+      <Legend iconSize={0} width={120} height={140} layout="vertical" verticalAlign="top" align="left" />
       <Tooltip />
       <text
-          x="105"
-          y="125"
-          textAnchor="start"
-          dominantBaseline="hanging"
-          fill="grey"
-        >
-          {data[1].score} %
-        </text>
+        x="90"
+        y="90"
+        textAnchor="start"
+        dominantBaseline="hanging"
+        fill="grey"
+      >
+        {updateData[1].score} %
+      </text>
       <text
-          x="95"
-          y="145"
-          textAnchor="start"
-          dominantBaseline="hanging"
-          fill="grey"
-        >
-          de votre
-        </text>
-        <text
-          x="95"
-          y="165"
-          textAnchor="start"
-          dominantBaseline="hanging"
-          fill="grey"
-        >
-          objectif
-        </text>
-      </RadialBarChart>
-    </ResponsiveContainer>
-    
+        x="80"
+        y="110"
+        textAnchor="start"
+        dominantBaseline="hanging"
+        fill="grey"
+      >
+        de votre
+      </text>
+      <text
+        x="82"
+        y="130"
+        textAnchor="start"
+        dominantBaseline="hanging"
+        fill="grey"
+      >
+        objectif
+      </text>
+    </RadialBarChart>
   );
 };
 

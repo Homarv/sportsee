@@ -1,12 +1,14 @@
 .sidebar{
-  width: 120px;
+  width: 10%;
   background-color: black;
   display: flex;
   flex-direction: column ;
   justify-content: space-around;
   align-items: center;
+  flex: 1;
   .sidebarbtn{
     margin-bottom: 20px;
+    background-color: white;
   }
 }
 

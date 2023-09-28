@@ -1,4 +1,13 @@
 import { Link } from 'react-router-dom';
+import logo from '../assets/logo_sportsee.png';
+
+/**
+ * Composant de la barre de navigation.
+ *
+ * @component
+ * @returns {JSX.Element} Élément JSX représentant la barre de navigation.
+ */
+
 
 const Navbar = () => {
   return (
@@ -7,8 +16,8 @@ const Navbar = () => {
         <li>
           <Link to="/" className="link">
             <div className='navbar_container_logo'>
-             <img className='navbar_logo' src='logo_sportsee.png' alt='logo'/>
-             <h1>Sportsee</h1>
+              <img className='navbar_logo' src={logo} alt='logo'/>
+              <h1>Sportsee</h1>
             </div>
           </Link>
         </li>
