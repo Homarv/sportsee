@@ -1,4 +1,4 @@
-import { RadialBarChart, RadialBar, Legend, Tooltip } from 'recharts';
+import { RadialBarChart, RadialBar, Legend } from 'recharts';
 import Modele from '../models/Modele';
 
 /**
@@ -28,7 +28,6 @@ const SimpleRadialBarchart = ({ informationData }) => {
     >
       <RadialBar dataKey="score" cornerRadius={10} />
       <Legend iconSize={0} width={120} height={140} layout="vertical" verticalAlign="top" align="left" />
-      <Tooltip />
       <text
         x="90"
         y="90"

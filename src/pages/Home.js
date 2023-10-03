@@ -12,7 +12,6 @@ import GetInformation from '../services/GetInformation';
 import GetPerformance from '../services/GetPerformance';
 import Welcome from '../components/Welcome';
 import AverageSessionLinechart from '../components/AverageSessionLinechart';
-import Error from './Error';
 
 /**
  * Composant principal pour la page d'accueil.
@@ -69,7 +68,7 @@ const Home = () => {
         </div>
       </div>
     </div>
-  ) : <Error />;
+  ) : "";
 };
 
 export default Home;
