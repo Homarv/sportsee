@@ -7,38 +7,38 @@ import {
 	Tooltip,
 	CartesianGrid,
 } from "recharts";
-import Modele from "../models/Modele";
+import Model from "../models/Model";
 
 /**
- * Composant de graphique à barres pour l'activité quotidienne.
+ * Bar chart component for daily activity.
  *
  * @component
- * @param {Object} props - Les propriétés du composant.
- * @param {Object} props.activityData - Données de l'activité quotidienne.
- * @returns {JSX.Element} Élément JSX représentant le graphique à barres.
+ * @param {Object} props - Component properties.
+ * @param {Object} props.activityData - Daily activity data.
+ * @returns {JSX.Element} JSX element representing the bar chart.
  */
 
 const Barchart = ({ activityData }) => {
-	// calcul le poids maximal de l'utilisateur
+	// Calculate the user's maximum weight
 	const maxKilogram = Math.max(
 		...activityData.sessions.map((session) => session.kilogram)
 	);
-	// Initialise le modèle de données
-	let modele = new Modele();
-	const updateData = modele.formatdate(activityData);
+	// Initialize the data model
+	let model = new Model();
+	const updateData = model.formatdate(activityData);
 
 	/**
-	 * Composant personnalisé pour l'affichage des informations de tooltip.
+	 * Custom component for displaying tooltip information.
 	 *
-	 * @param {Object} props - Les propriétés du composant.
-	 * @param {boolean} props.active - Indique si le tooltip est actif.
-	 * @param {Object[]} props.payload - Données du tooltip.
-	 * @returns {JSX.Element|null} Élément JSX représentant le tooltip personnalisé.
+	 * @param {Object} props - Component properties.
+	 * @param {boolean} props.active - Indicates whether the tooltip is active.
+	 * @param {Object[]} props.payload - Tooltip data.
+	 * @returns {JSX.Element|null} JSX element representing the custom tooltip.
 	 */
 
 	const CustomTooltip = ({ active, payload }) => {
 		if (active) {
-			const data = payload[0].payload; // Récupérer les données du point de données survolé
+			const data = payload[0].payload; // Retrieve data from the hovered data point
 			return (
 				<div className="custom-tooltip-barchart">
 					<p>{data.kilogram} kg</p>
@@ -49,7 +49,7 @@ const Barchart = ({ activityData }) => {
 		return null;
 	};
 
-	// Rendu du composant
+	// Component rendering
 	return (
 		<BarChart
 			className="barchart"
@@ -63,7 +63,7 @@ const Barchart = ({ activityData }) => {
 				dataKey="day"
 				dy={16}
 				tickLine={false}
-				// tickFormatter={} // Utilisez la fonction de formatage personnalisée pour les dates
+				// tickFormatter={} // Use the custom formatting function for dates
 			/>
 			<YAxis
 				dataKey="kilogram"
@@ -71,7 +71,7 @@ const Barchart = ({ activityData }) => {
 				orientation="right"
 				tickLine={false}
 				axisLine={false}
-				domain={[0, maxKilogram + 5]} // Utilisez les valeurs minimale et maximale calculées avec des marges
+				domain={[0, maxKilogram + 5]} // Use calculated minimum and maximum values with margins
 			/>
 			<CartesianGrid vertical={false} strokeDasharray="4 2" />
 			<Tooltip content={<CustomTooltip />} />

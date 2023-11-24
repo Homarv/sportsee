@@ -1,16 +1,16 @@
 import { RadialBarChart, RadialBar, Legend } from "recharts";
-import Modele from "../models/Modele";
+import Model from "../models/Model";
 
 /**
- * Composant affichant un graphique radial de barres simples.
+ * Component displaying a simple radial bar chart.
  *
  * @component
- * @param {Object} informationData - Les données d'information.
- * @returns {JSX.Element} Élément JSX représentant le graphique radial de barres simples.
+ * @param {Object} informationData - Information data.
+ * @returns {JSX.Element} JSX element representing the simple radial bar chart.
  */
 
 const SimpleRadialBarchart = ({ informationData }) => {
-	let model = new Modele();
+	let model = new Model();
 	const updateData = model.calculScore(informationData);
 
 	return (

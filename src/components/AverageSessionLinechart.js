@@ -7,33 +7,33 @@ import {
 	ReferenceArea,
 	YAxis,
 } from "recharts";
-import Modele from "../models/Modele";
+import Model from "../models/Model";
 
 /**
- * Composant graphique en ligne.
+ * Online graphics component
  *
  * @component
- * @param {Object} props - Les propriétés du composant.
- * @param {Object} props.averageSessionsData - Données des sessions moyennes.
- * @returns {JSX.Element} Élément JSX représentant un graphique en ligne représentant les durées de sessions moyennes.
+ * @param {Object} props - Component properties.
+ * @param {Object} props.averageSessionsData - The component properties.
+ * @returns {JSX.Element} JSX element representing a line chart depicting average session durations.
  */
 
 const Linechart = ({ averageSessionsData }) => {
 	const [clickX, setClickX] = useState(null);
 	const [showRightBackground, setShowRightBackground] = useState(false);
-	const joursSemaine = ["O", "L", "M", "M", "J", "V", "S", "D"];
+	const weekDays = ["S", "M", "T", "W", "T", "F", "S", "S"];
 
-	// Initialise le modèle de données
-	let modele = new Modele();
-	let updateData = modele.addDayZero(averageSessionsData);
+	// Initializes the data model
+	let model = new Model();
+	let updateData = model.addDayZero(averageSessionsData);
 
 	/**
-	 * Composant personnalisé pour l'affichage des informations de tooltip.
+	 * Custom component for displaying tooltip information.
 	 *
-	 * @param {Object} props - Les propriétés du composant.
-	 * @param {boolean} props.active - Indique si le tooltip est actif.
-	 * @param {Object[]} props.payload - Données du tooltip.
-	 * @returns {JSX.Element|null} Élément JSX représentant le tooltip personnalisé.
+	 * @param {Object} props - Component properties.
+	 * @param {boolean} props.active - Indicates whether the tooltip is active.
+	 * @param {Object[]} props.payload - Tooltip data.
+	 * @returns {JSX.Element|null} JSX element representing the custom tooltip.
 	 */
 
 	const CustomTooltip = ({ active, payload }) => {
@@ -48,9 +48,9 @@ const Linechart = ({ averageSessionsData }) => {
 	};
 
 	/**
-	 * Gère le clic sur le graphique.
+	 * Handles click on the chart.
 	 *
-	 * @param {Object} event - Événement de clic.
+	 * @param {Object} event - Click event.
 	 */
 	const handleClick = (event) => {
 		const x = event.activeLabel;
@@ -60,7 +60,7 @@ const Linechart = ({ averageSessionsData }) => {
 		}
 	};
 
-	// Rendu du composant
+	// Component rendering
 	return (
 		<div style={{ backgroundColor: "red", borderRadius: "10px" }}>
 			<LineChart
@@ -78,7 +78,7 @@ const Linechart = ({ averageSessionsData }) => {
 					tick={{ fontSize: "15px", fill: "white" }}
 					dy={-30}
 					dx={-10}
-					tickFormatter={(value) => joursSemaine[value]}
+					tickFormatter={(value) => weekDays[value]}
 				/>
 				{showRightBackground && (
 					<ReferenceArea
@@ -86,7 +86,7 @@ const Linechart = ({ averageSessionsData }) => {
 						x2={updateData.sessions.length - 1}
 						fill="black"
 						fillOpacity={0.1}
-						radius={[0, 10, 10, 0]} // Définit le bord arrondi droit
+						radius={[0, 10, 10, 0]} // Sets the rounded right border
 					/>
 				)}
 				<YAxis

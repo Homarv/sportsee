@@ -14,22 +14,22 @@ import Welcome from "../components/Welcome";
 import AverageSessionLinechart from "../components/AverageSessionLinechart";
 
 /**
- * Composant principal pour la page d'accueil.
+ * Main component for the home page.
  * @component
- * @returns {JSX.Element} Élément JSX représentant la page d'accueil.
+ * @returns {JSX.Element} JSX element representing the home page.
  */
 const Home = () => {
-	// Récupère l'ID de l'utilisateur à partir des paramètres d'URL
+	// Get user ID from URL parameters
 	const userId = Number(useParams().id);
 
-	// États locaux pour stocker les données
+	// Local states to store data
 	const [averageSessionsData, setAverageSessionsData] = useState(null);
 	const [activityData, setActivityData] = useState(null);
 	const [informationData, setInformationData] = useState(null);
 	const [performanceData, setPerformanceData] = useState(null);
 
 	useEffect(() => {
-		// Récupère les données des sessions moyennes, d'activité, d'information et de performance de l'utilisateur
+		// Retrieves data from average sessions, activity, information and user performance
 		Promise.all([
 			GetAverageSessions(userId),
 			GetActivity(userId),
@@ -43,7 +43,7 @@ const Home = () => {
 		});
 	}, [userId]);
 
-	// Rendu du composant
+	// Rendering the component
 	return averageSessionsData && activityData ? (
 		<div className="home">
 			<Navbar />

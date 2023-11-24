@@ -2,10 +2,10 @@ import { Link } from "react-router-dom";
 import logo from "../assets/logo_sportsee.png";
 
 /**
- * Composant de la barre de navigation.
+ * Navigation bar component.
  *
  * @component
- * @returns {JSX.Element} Élément JSX représentant la barre de navigation.
+ * @returns {JSX.Element} JSX element representing the navigation bar.
  */
 
 const Navbar = () => {

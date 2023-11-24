@@ -1,9 +1,9 @@
 /**
- * Composant de bienvenue affichant un message personnalisé pour l'utilisateur.
+ * Welcome component displaying a personalized message for the user.
  *
  * @component
- * @param {Object} informationData - Les données d'information de l'utilisateur.
- * @returns {JSX.Element} Élément JSX représentant le message de bienvenue.
+ * @param {Object} informationData - User information data.
+ * @returns {JSX.Element} JSX element representing the welcome message.
  */
 
 const Welcome = ({ informationData }) => {

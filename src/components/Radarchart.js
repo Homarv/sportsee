@@ -1,21 +1,21 @@
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis } from "recharts";
-import Modele from "../models/Modele";
+import Model from "../models/Model";
 
 /**
- * Composant affichant un graphique radar de performances.
+ * Component displaying a radar chart of performances.
  *
  * @component
- * @param {Object} performanceData - Les données de performance.
- * @param {Array} performanceData - Les données de performance par catégorie.
- * @param {string} performanceData.kind - Le type de performance (ex. "cardio").
- * @param {number} performanceData.value - La valeur de performance pour la catégorie.
- * @returns {JSX.Element} Élément JSX représentant le graphique radar de performances.
+ * @param {Object} performanceData - Performance data.
+ * @param {Array} performanceData - Performance data by category.
+ * @param {string} performanceData.kind - The type of performance (e.g., "cardio").
+ * @param {number} performanceData.value - The performance value for the category.
+ * @returns {JSX.Element} JSX element representing the radar chart of performances.
  */
 
 const Radarchart = ({ performanceData }) => {
-	// Initialise le modèle de données
-	const modele = new Modele();
-	const updateData = modele.transformPerformance(performanceData);
+	// Initializes the data model
+	const model = new Model();
+	const updateData = model.transformPerformance(performanceData);
 
 	return (
 		<RadarChart

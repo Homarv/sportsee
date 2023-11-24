@@ -1,23 +1,24 @@
 /**
- * Composant de bouton de la barre latérale affichant une icône et une description.
+ * Sidebar button component displaying an icon and a description.
  *
  * @component
- * @param {Object} props - Les propriétés du composant.
- * @param {string} props.imageUrl - L'URL de l'image de l'icône.
- * @param {string} props.description - La description de l'icône.
- * @param {string} props.addClass - La classe additionnelle à ajouter au composant (optionnelle).
- * @returns {JSX.Element} Élément JSX représentant le bouton de la barre latérale.
+ * @param {Object} props - Component properties.
+ * @param {string} props.imageUrl - The URL of the icon image.
+ * @param {string} props.description - The description of the icon.
+ * @param {string} props.addClass - Additional class to add to the component (optional).
+ * @returns {JSX.Element} JSX element representing the sidebar button.
  */
 
-const Sidebarbtn = ({ imageUrl, description, addClass }) => {
-	// Ajoute la classe additionnelle (addClass) avec les classes existantes
-	const classNames = `sidebarbtn${addClass ? ` sidebarbtn__${addClass}` : ""}`;
+const SidebarBtn = ({ imageUrl, description, addClass }) => {
+  // Adds the additional class (addClass) with the existing classes
+  const classNames = `sidebarbtn${addClass ? ` sidebarbtn__${addClass}` : ""}`;
 
-	return (
-		<div className={classNames}>
-			<img src={imageUrl} alt={description} className="centered-image" />
-		</div>
-	);
+  return (
+    <div className={classNames}>
+      <img src={imageUrl} alt={description} className="centered-image" />
+    </div>
+  );
 };
 
-export default Sidebarbtn;
+export default SidebarBtn;
+
