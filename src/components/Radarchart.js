@@ -28,7 +28,7 @@ const Radarchart = ({ performanceData }) => {
 			style={{ backgroundColor: "black", borderRadius: "10px" }}
 		>
 			<PolarGrid />
-			<PolarAngleAxis dataKey="kind" tick={{ fontSize: 10, stroke: "white" }} />
+			<PolarAngleAxis dataKey="kind" tick={{ fontSize: 9, stroke: "white" }} />
 			<Radar
 				name="performance"
 				dataKey="value"

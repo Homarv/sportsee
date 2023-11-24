@@ -82,9 +82,18 @@ export default class Modele {
    * @returns {Array} Array of objects representing transformed performance data.
    */
   transformPerformance(data) {
+		const frenchTranslation = {
+			"1": "cardio",
+			"2": "énergie",
+			"3": "endurance",
+			"4": "force",
+			"5": "vitesse",
+			"6": "intensité"
+		};
+
     const updatePerformance = data.data.map((item) => ({
       value: item.value,
-      kind: data.kind[item.kind.toString()],
+      kind: frenchTranslation[item.kind.toString()],
     }));
     return updatePerformance;
   }
