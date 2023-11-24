@@ -15,6 +15,8 @@ The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
 ### For see user profil page 
+Launch Back (https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard) with yarn on (http://localhost:3000) 
+Launch Front with npm on (http://localhost:3001)
 Open (http://localhost:3001/home/12)
 Or (http://localhost:3001/home/18)
 
