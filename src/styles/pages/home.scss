@@ -1,43 +1,40 @@
 .home {
-  display: flex;
-  flex-direction: column;
-  height: 100vh; 
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
 }
 
-.container{
-  display: flex;
-  flex: 1;
+.container {
+	display: flex;
+	flex: 1;
 }
 
-.main-container{
-  width: 90%;
-  padding: 30px 0px 0px 30px;
+.main-container {
+	width: 90%;
+	padding: 30px 0px 0px 30px;
 }
 
-
-.principal-container{
-  display: flex;
-  width: 100%;
-
+.principal-container {
+	display: flex;
+	width: 100%;
 }
 
-.child-chart-container{
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
-
+.child-chart-container {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 20px;
 }
 
-.test1{
-  background-color: #FBFBFB;
-  height: 200px;
-  width: 30%;
+.test1 {
+	background-color: #fbfbfb;
+	height: 200px;
+	width: 30%;
 }
 
-.barchart-container{
-  width: 100%;
+.barchart-container {
+	width: 100%;
 }
 
-.barChartActivity{
-  width: 100%;
+.barChartActivity {
+	width: 100%;
 }

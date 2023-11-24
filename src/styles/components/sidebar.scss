@@ -1,20 +1,20 @@
-.sidebar{
-  width: 10%;
-  background-color: black;
-  display: flex;
-  flex-direction: column ;
-  justify-content: space-around;
-  align-items: center;
-  flex: 1;
-  .sidebarbtn{
-    margin-bottom: 20px;
-    background-color: white;
-  }
+.sidebar {
+	width: 10%;
+	background-color: black;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	flex: 1;
+	.sidebarbtn {
+		margin-bottom: 20px;
+		background-color: white;
+	}
 }
 
-.copiryght{
-  color: white;
-  transform: rotate(-90deg);
-  white-space: nowrap;
-  margin-bottom: 20px;
+.copiryght {
+	color: white;
+	transform: rotate(-90deg);
+	white-space: nowrap;
+	margin-bottom: 20px;
 }

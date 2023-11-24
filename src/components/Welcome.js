@@ -7,22 +7,17 @@
  */
 
 const Welcome = ({ informationData }) => {
-  return (
-    <div className='welcome'>
-      <p className='welcome__message'>
-        Bonjour{' '}
-        <span style={{ color: 'red' }}>
-          {informationData.userInfos.firstName}
-        </span>
-      </p>
-      <p>Félicitation ! Vous avez explosé vos objectifs hier 👏 </p>
-    </div>
-  );
+	return (
+		<div className="welcome">
+			<p className="welcome__message">
+				Bonjour{" "}
+				<span style={{ color: "red" }}>
+					{informationData.userInfos.firstName}
+				</span>
+			</p>
+			<p>Félicitation ! Vous avez explosé vos objectifs hier 👏 </p>
+		</div>
+	);
 };
 
 export default Welcome;
-
-
-
-
-

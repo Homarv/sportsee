@@ -1,35 +1,35 @@
-.nutrition{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin-left: 10px;
-  &__container{
-    display: flex;
-    align-items: center;
-    background-color: #FBFBFB;
-    height: 20%;
-    border-radius: 7px;
-  }
-  &__description{ 
-    font-size: 15px;
-    color: grey;
-  }
-  .sidebarbtn{
-    margin: 20px;
-    &__fire{
-      background-color: #fbeaea;
-    }
-    &__chicken {
-      background-color: #e9f5fb;
-    }
-    &__apple {
-      background-color: #fbf7e5;
-    }
-    &__burger{
-      background-color: #fceaef;
-    }
-  }
-  p{
-    margin-right: 20px;
-  }
+.nutrition {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin-left: 10px;
+	&__container {
+		display: flex;
+		align-items: center;
+		background-color: #fbfbfb;
+		height: 20%;
+		border-radius: 7px;
+	}
+	&__description {
+		font-size: 15px;
+		color: grey;
+	}
+	.sidebarbtn {
+		margin: 20px;
+		&__fire {
+			background-color: #fbeaea;
+		}
+		&__chicken {
+			background-color: #e9f5fb;
+		}
+		&__apple {
+			background-color: #fbf7e5;
+		}
+		&__burger {
+			background-color: #fceaef;
+		}
+	}
+	p {
+		margin-right: 20px;
+	}
 }

@@ -10,14 +10,14 @@
  */
 
 const Sidebarbtn = ({ imageUrl, description, addClass }) => {
-  // Ajoute la classe additionnelle (addClass) avec les classes existantes
-  const classNames = `sidebarbtn${addClass ? ` sidebarbtn__${addClass}` : ''}`;
+	// Ajoute la classe additionnelle (addClass) avec les classes existantes
+	const classNames = `sidebarbtn${addClass ? ` sidebarbtn__${addClass}` : ""}`;
 
-  return (
-    <div className={classNames}>
-      <img src={imageUrl} alt={description} className="centered-image" />
-    </div>
-  );
+	return (
+		<div className={classNames}>
+			<img src={imageUrl} alt={description} className="centered-image" />
+		</div>
+	);
 };
 
 export default Sidebarbtn;

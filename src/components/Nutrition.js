@@ -1,8 +1,8 @@
 import Sidebarbtn from "./Sidebarbtn";
-import flame from '../assets/flame.svg'
-import burger from '../assets/burger.svg'
-import apple from '../assets/apple.svg'
-import chicken from '../assets/chicken.svg'
+import flame from "../assets/flame.svg";
+import burger from "../assets/burger.svg";
+import apple from "../assets/apple.svg";
+import chicken from "../assets/chicken.svg";
 
 /**
  * Composant affichant les informations nutritionnelles.
@@ -17,39 +17,43 @@ import chicken from '../assets/chicken.svg'
  * @returns {JSX.Element} Élément JSX représentant les informations nutritionnelles.
  */
 
-const Nutrition = ({informationData}) => {
-  return (
-    <div className='nutrition'>
-      <div className="nutrition__container">
-        <Sidebarbtn imageUrl={flame} description="flamme" addClass="fire"/>
-        <div>
-          <p className="bold">{informationData.keyData.calorieCount}Kcal</p>
-          <p className="nutrition__description">Calories</p>
-        </div>
-      </div>
-      <div className="nutrition__container">
-        <Sidebarbtn imageUrl={chicken} description="poulet" addClass="chicken"/>
-        <div>
-          <p className="bold">{informationData.keyData.proteinCount}g</p>
-          <p className="nutrition__description">Protéine</p>
-        </div>
-      </div>
-      <div className="nutrition__container">
-        <Sidebarbtn imageUrl={apple} description="pomme" addClass="apple"/>
-        <div>
-          <p className="bold">{informationData.keyData.carbohydrateCount}g</p>
-          <p className="nutrition__description">Glucides</p>
-        </div>
-      </div>
-      <div className="nutrition__container">
-        <Sidebarbtn imageUrl={burger} description="burger" addClass="burger"/>
-        <div>
-          <p className="bold">{informationData.keyData.lipidCount}g</p>
-          <p className="nutrition__description">Lipides</p>
-        </div>
-      </div>
-    </div>
-  );
+const Nutrition = ({ informationData }) => {
+	return (
+		<div className="nutrition">
+			<div className="nutrition__container">
+				<Sidebarbtn imageUrl={flame} description="flamme" addClass="fire" />
+				<div>
+					<p className="bold">{informationData.keyData.calorieCount}Kcal</p>
+					<p className="nutrition__description">Calories</p>
+				</div>
+			</div>
+			<div className="nutrition__container">
+				<Sidebarbtn
+					imageUrl={chicken}
+					description="poulet"
+					addClass="chicken"
+				/>
+				<div>
+					<p className="bold">{informationData.keyData.proteinCount}g</p>
+					<p className="nutrition__description">Protéine</p>
+				</div>
+			</div>
+			<div className="nutrition__container">
+				<Sidebarbtn imageUrl={apple} description="pomme" addClass="apple" />
+				<div>
+					<p className="bold">{informationData.keyData.carbohydrateCount}g</p>
+					<p className="nutrition__description">Glucides</p>
+				</div>
+			</div>
+			<div className="nutrition__container">
+				<Sidebarbtn imageUrl={burger} description="burger" addClass="burger" />
+				<div>
+					<p className="bold">{informationData.keyData.lipidCount}g</p>
+					<p className="nutrition__description">Lipides</p>
+				</div>
+			</div>
+		</div>
+	);
 };
 
 export default Nutrition;
