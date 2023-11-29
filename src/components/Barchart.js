@@ -25,7 +25,7 @@ const Barchart = ({ activityData }) => {
 	);
 	// Initialize the data model
 	let model = new Model();
-	const updateData = model.formatdate(activityData);
+	const updateData = model.formaDate(activityData);
 
 	/**
 	 * Custom component for displaying tooltip information.

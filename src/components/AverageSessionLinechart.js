@@ -18,7 +18,7 @@ import Model from "../models/Model";
  * @returns {JSX.Element} JSX element representing a line chart depicting average session durations.
  */
 
-const Linechart = ({ averageSessionsData }) => {
+const AverageSessionLinechart = ({ averageSessionsData }) => {
 	const [clickX, setClickX] = useState(null);
 	const [showRightBackground, setShowRightBackground] = useState(false);
 	const weekDays = ["S", "M", "T", "W", "T", "F", "S", "S"];
@@ -127,4 +127,4 @@ const Linechart = ({ averageSessionsData }) => {
 	);
 };
 
-export default Linechart;
+export default AverageSessionLinechart;

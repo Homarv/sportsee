@@ -1,6 +1,6 @@
-export const switchtoApi = false;
+export const switchToMock = false;
 
-if (switchtoApi) {
+if (switchToMock) {
 	console.log("on Mock");
 } else {
 	console.log("on API");
