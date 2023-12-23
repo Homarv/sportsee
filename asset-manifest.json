@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.06212f8d.css",
-    "main.js": "/static/js/main.975102db.js",
-    "static/js/787.a8762e9d.chunk.js": "/static/js/787.a8762e9d.chunk.js",
-    "static/media/logo_sportsee.png": "/static/media/logo_sportsee.2db20fb08e5d5fe27d09.png",
-    "static/media/swimming.svg": "/static/media/swimming.75a6ba7da9eb4a0783f267752f367f4e.svg",
-    "static/media/cycling.svg": "/static/media/cycling.f70d8f64d19cd6a7644b0fd6ebed53a9.svg",
-    "static/media/apple.svg": "/static/media/apple.95581ba1b204199334e122af4784ab16.svg",
-    "static/media/chicken.svg": "/static/media/chicken.ffbc3b88a759c706993bb26fbd66113b.svg",
-    "static/media/yoga.svg": "/static/media/yoga.576e721bae4b59b904821f97af9766ed.svg",
-    "static/media/burger.svg": "/static/media/burger.18f60e0efe37e86bcac036d673f0bab0.svg",
-    "index.html": "/index.html",
-    "static/media/flame.svg": "/static/media/flame.25fef86ed5860200bdf90f9cd185e1e3.svg",
-    "static/media/dumbbell.svg": "/static/media/dumbbell.7df3ec8df33eb529ce8049188c1ce20a.svg",
-    "main.06212f8d.css.map": "/static/css/main.06212f8d.css.map",
-    "main.975102db.js.map": "/static/js/main.975102db.js.map",
-    "787.a8762e9d.chunk.js.map": "/static/js/787.a8762e9d.chunk.js.map"
+    "main.css": "/%3Chttps://homarv.github.io/sportsee/%3E/static/css/main.06212f8d.css",
+    "main.js": "/%3Chttps://homarv.github.io/sportsee/%3E/static/js/main.6d245cbf.js",
+    "static/js/787.a8762e9d.chunk.js": "/%3Chttps://homarv.github.io/sportsee/%3E/static/js/787.a8762e9d.chunk.js",
+    "static/media/logo_sportsee.png": "/%3Chttps://homarv.github.io/sportsee/%3E/static/media/logo_sportsee.2db20fb08e5d5fe27d09.png",
+    "static/media/swimming.svg": "/%3Chttps://homarv.github.io/sportsee/%3E/static/media/swimming.75a6ba7da9eb4a0783f267752f367f4e.svg",
+    "static/media/cycling.svg": "/%3Chttps://homarv.github.io/sportsee/%3E/static/media/cycling.f70d8f64d19cd6a7644b0fd6ebed53a9.svg",
+    "static/media/apple.svg": "/%3Chttps://homarv.github.io/sportsee/%3E/static/media/apple.95581ba1b204199334e122af4784ab16.svg",
+    "index.html": "/%3Chttps://homarv.github.io/sportsee/%3E/index.html",
+    "static/media/chicken.svg": "/%3Chttps://homarv.github.io/sportsee/%3E/static/media/chicken.ffbc3b88a759c706993bb26fbd66113b.svg",
+    "static/media/yoga.svg": "/%3Chttps://homarv.github.io/sportsee/%3E/static/media/yoga.576e721bae4b59b904821f97af9766ed.svg",
+    "static/media/burger.svg": "/%3Chttps://homarv.github.io/sportsee/%3E/static/media/burger.18f60e0efe37e86bcac036d673f0bab0.svg",
+    "static/media/flame.svg": "/%3Chttps://homarv.github.io/sportsee/%3E/static/media/flame.25fef86ed5860200bdf90f9cd185e1e3.svg",
+    "static/media/dumbbell.svg": "/%3Chttps://homarv.github.io/sportsee/%3E/static/media/dumbbell.7df3ec8df33eb529ce8049188c1ce20a.svg",
+    "main.06212f8d.css.map": "/%3Chttps://homarv.github.io/sportsee/%3E/static/css/main.06212f8d.css.map",
+    "main.6d245cbf.js.map": "/%3Chttps://homarv.github.io/sportsee/%3E/static/js/main.6d245cbf.js.map",
+    "787.a8762e9d.chunk.js.map": "/%3Chttps://homarv.github.io/sportsee/%3E/static/js/787.a8762e9d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.06212f8d.css",
-    "static/js/main.975102db.js"
+    "static/js/main.6d245cbf.js"
   ]
 }
